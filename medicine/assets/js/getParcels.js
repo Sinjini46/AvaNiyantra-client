@@ -15,7 +15,7 @@ function parcel_delete(id, med_id) {
         body: JSON.stringify(data)
     }
 
-    let fetchRes = fetch(url = "http://127.0.0.1:8000/parcel/delete_cart_medicines", options);
+    let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/parcel/delete_cart_medicines", options);
     fetchRes.then(res => res.json())
         .then(d => {
             if (d.msg == "Medicine deleted successfully") {
@@ -103,7 +103,7 @@ async function fetchData() {
     };
 
     try {
-        let response = await fetch("http://127.0.0.1:8000/parcel/get_parcels_id", opt);
+        let response = await fetch("https://avaniyantra-server.vercel.app/parcel/get_parcels_id", opt);
         let data = await response.json();
 
         for (let i = 0; i < data.data.length; i++) {

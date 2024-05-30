@@ -6,7 +6,7 @@ let options = {
     body: JSON.stringify({ "parcel_id": sessionStorage.getItem("parcel_id") })
 }
 
-let fetchRes = fetch(url = "http://127.0.0.1:8000/parcel/get_all_parcels", options);
+let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/parcel/get_all_parcels", options);
 fetchRes
     .then(async res => res.json())
     .then(async d => {

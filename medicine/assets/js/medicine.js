@@ -23,7 +23,7 @@ function redirectToDashboard() {
   };
   //console.log(options)
   let fetchRes1 = fetch(
-    (url = "http://127.0.0.1:8000/user/get_user_by_id"),
+    (url = "https://avaniyantra-server.vercel.app/user/get_user_by_id"),
     options
   );
   fetchRes1
@@ -85,7 +85,7 @@ btn.addEventListener("click", () => {
     body: JSON.stringify(user),
   };
   let Result = fetch(
-    (url = "http://127.0.0.1:8000/medicine/update_med_by_user"),
+    (url = "https://avaniyantra-server.vercel.app/medicine/update_med_by_user"),
     options
   );
   Result.then((res) => res.json()).then((d) => {
@@ -97,7 +97,7 @@ btn.addEventListener("click", () => {
     } else {
       console.log("Adding Time");
       let fetchRes = fetch(
-        (url = "http://127.0.0.1:8000/medicine/add"),
+        (url = "https://avaniyantra-server.vercel.app/medicine/add"),
         options
       );
       fetchRes

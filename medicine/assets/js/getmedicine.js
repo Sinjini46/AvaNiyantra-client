@@ -87,7 +87,7 @@ function med_delete(id) {
         body: JSON.stringify(data)
     }
 
-    let fetchRes = fetch(url = "http://127.0.0.1:8000/medicine/delete", options);
+    let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/medicine/delete", options);
     fetchRes.then(res => res.json())
         .then(d => {
             if (d.msg == "done") {
@@ -115,7 +115,7 @@ let medicine = {}; // Object to store items in the medicine
 let medicineRows = {}; // Object to store references to the created rows
 let i = 0;
 
-let fetchRes = fetch(url = "http://127.0.0.1:8000/medicine/", options);
+let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/medicine/", options);
 fetchRes.then(res => res.json())
     .then(d => {
         container = document.getElementById("medicine-list")

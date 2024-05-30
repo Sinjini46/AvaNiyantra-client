@@ -106,7 +106,7 @@ function update_medicine(update_med) {
     },
     body: JSON.stringify(update_med),
   };
-  fetchRes = fetch((url = "http://127.0.0.1:8000/medicine/update"), options);
+  fetchRes = fetch((url = "https://avaniyantra-server.vercel.app/medicine/update"), options);
   fetchRes
     .then((res) => res.json())
     .then((d) => {
@@ -166,7 +166,7 @@ function add_details(requestData) {
     },
     body: JSON.stringify(requestData),
   };
-  let fetchRes = fetch((url = "http://127.0.0.1:8000/pharma/add"), options);
+  let fetchRes = fetch((url = "https://avaniyantra-server.vercel.app/pharma/add"), options);
   fetchRes
     .then((res) => res.json())
     .then((d) => {
@@ -215,7 +215,7 @@ button.addEventListener("click", (e) => {
   console.log(requestData);
   console.log(counter);
 
-  let fetchRes1 = fetch((url = "http://127.0.0.1:8000/medicine/"), options1);
+  let fetchRes1 = fetch((url = "https://avaniyantra-server.vercel.app/medicine/"), options1);
   fetchRes1
     .then((res) => res.json())
     .then((d) => {

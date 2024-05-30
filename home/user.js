@@ -8,7 +8,7 @@ user = {
     },
     body: JSON.stringify(user)
 }
-let fetchRes1 = fetch(url = "http://127.0.0.1:8000/user/get_user_by_id", options);
+let fetchRes1 = fetch(url = "https://avaniyantra-server.vercel.app/user/get_user_by_id", options);
 fetchRes1.then(res => res.json())
       .then(d => {
 if(d.msg== "done"){

@@ -9,7 +9,7 @@ let options = {
     body: JSON.stringify(user)
 }
 
-let fetchRes = fetch(url = "http://127.0.0.1:8000/medicine/", options);
+let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/medicine/", options);
 fetchRes
     .then(res => res.json())
     .then(d => {
@@ -63,7 +63,7 @@ fetchRes
                             body: JSON.stringify(parcel)
                         }
 
-                        let fetchRes = fetch(url = "http://127.0.0.1:8000/parcel/create_parcel", options);
+                        let fetchRes = fetch(url = "https://avaniyantra-server.vercel.app/parcel/create_parcel", options);
                         fetchRes.then(res => res.json())
                             .then(d => {
                                 swal("Added to cart", "The medicine has been successfully added to cart.", "success").then(() => {

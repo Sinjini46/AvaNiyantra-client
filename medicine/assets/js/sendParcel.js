@@ -13,7 +13,7 @@ btn.addEventListener("click", () => {
         },
         body: JSON.stringify({ "email": email })
     }
-    const gen_recv_id = fetch(url = "http://127.0.0.1:8000/user/getuser_by_email", options);
+    const gen_recv_id = fetch(url = "https://avaniyantra-server.vercel.app/user/getuser_by_email", options);
     gen_recv_id.then(res => res.json())
         .then(d => {
             if (d.msg == "No user") {
@@ -34,7 +34,7 @@ btn.addEventListener("click", () => {
                     body: JSON.stringify({ "id": sender_id })
                 }
 
-                const gen_pk_id = fetch(url = "http://127.0.0.1:8000/parcel/add_parcel_id", options);
+                const gen_pk_id = fetch(url = "https://avaniyantra-server.vercel.app/parcel/add_parcel_id", options);
                 gen_pk_id.then(res => res.json())
                     .then(d => {
 
@@ -47,7 +47,7 @@ btn.addEventListener("click", () => {
                                 _id: localStorage.getItem('user')
                             })
                         }
-                        const gen_name = fetch(url = "http://127.0.0.1:8000/user/get_user_by_id", uopt);
+                        const gen_name = fetch(url = "https://avaniyantra-server.vercel.app/user/get_user_by_id", uopt);
                         gen_name.then(res => res.json())
                             .then(uname => {
                                 const pk_id = d.data
@@ -64,7 +64,7 @@ btn.addEventListener("click", () => {
                                         "parcel_id": pk_id
                                     })
                                 }
-                                const gen_batch = fetch(url = "http://127.0.0.1:8000/batch/create_batch", opt);
+                                const gen_batch = fetch(url = "https://avaniyantra-server.vercel.app/batch/create_batch", opt);
                                 gen_batch.then(res => res.json())
                                     .then(d => {
                                         console.log(d)
